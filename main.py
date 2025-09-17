@@ -19,12 +19,14 @@ openai.api_key = OPENAI_API_KEY
 app = FastAPI(title="DescriptionAI - Resume Processor")
 
 # Update allowed_origins with your Vercel / domain names
+
 allowed_origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://your-frontend.vercel.app",   # <- replace with your actual Vercel URL
-    "https://descriptionai.online"        # your domain
+    "https://descriptionai-frontend.vercel.app",
+    "https://descriptionai.online"
 ]
+
 
 app.add_middleware(
     CORSMiddleware,
